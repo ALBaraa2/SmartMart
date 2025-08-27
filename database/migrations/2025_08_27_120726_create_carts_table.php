@@ -18,7 +18,6 @@ return new class extends Migration
             $table->timestamps();
 
             $table->unique(['user_id', 'supermarket_id']);
-            $table->index('status');
         });
     }
 
