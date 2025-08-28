@@ -15,15 +15,11 @@ class CartItem extends Model
         'quantity',
     ];
 
-    public function user() {
-        return $this->belongsTo(User::class);
+    public function cart() {
+        return $this->belongsTo(Cart::class);
     }
 
-    public function supermarket() {
-        return $this->belongsTo(Supermarket::class);
-    }
-
-    public function cartItems() {
-        return $this->hasMany(CartItem::class);
+    public function product() {
+        return $this->belongsTo(Product::class);
     }
 }
