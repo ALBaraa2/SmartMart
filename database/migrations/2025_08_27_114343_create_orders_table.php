@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('payment_method');
             $table->enum('payment_status', ['pending', 'paid', 'failed', 'refunded'])->default('pending');
             $table->string('delivery_type');
-            $table->string('delivery_fee');
+            $table->decimal('delivery_fee', 10, 2);
             $table->timestamps();
             $table->timestamp('confirmed_at')->nullable();
             $table->timestamp('processing_at')->nullable();
